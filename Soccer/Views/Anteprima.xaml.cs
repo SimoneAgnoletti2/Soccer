@@ -196,7 +196,6 @@ namespace Soccer.Views
         public async Task<bool> popolaDb()
         {
             await popolaDbCountries();
-            //await popolaDbLeague();
             return true;
         }
 
