@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soccer.Views.ClassificheCampionati">
+    <ContentPage.Content>
+
+        <StackLayout BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+
+            <ScrollView>
+                <FlexLayout BackgroundColor="White"  BindableLayout.ItemsSource="{Binding ListaCountry}" Wrap="Wrap" Direction="Row" JustifyContent="Center" AlignItems="Start" AlignContent="Start">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <Frame Margin="5, 5, 5, 5" Padding="0,0,0,0"  HeightRequest="150" WidthRequest="130"  BorderColor="Black" BackgroundColor="white" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                                <StackLayout Margin="0" >
+                                    <StackLayout Padding="25, 20, 30, 10" HeightRequest="53" WidthRequest="100" >
+                                        <StackLayout Padding="1"  BackgroundColor="Black" >
+
+                                            <Image Source="{Binding LinkImage}" HeightRequest="53" WidthRequest="80" Aspect="Fill" HorizontalOptions="StartAndExpand" VerticalOptions="StartAndExpand">
+                                                <Image.GestureRecognizers>
+                                                    <TapGestureRecognizer Command="{Binding TappedCommand}" NumberOfTapsRequired="1" />
+                                                </Image.GestureRecognizers>
+                                            </Image>
+                                        </StackLayout>
+                                    </StackLayout>
+                                    <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand">
+                                        <Label Text="{Binding Nome}" FontAttributes="Bold" LineBreakMode="WordWrap" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </FlexLayout>
+            </ScrollView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
+
+
+<!--<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soccer.Views.ClassificheCampionati">
+    <ContentPage.Content>-->
+
+<!--<Grid x:Name="scroll" BackgroundColor="white" IsClippedToBounds="True" Margin=" 0, 0, 0, 0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+                <RowDefinition Height="10*" />
+            </Grid.RowDefinitions>
+            <StackLayout  Grid.Column="1" Grid.ColumnSpan="9" Grid.Row="0" Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label x:Name="selectCountry" Padding="0, 25, 0, 0"  TextColor="Black" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout Grid.Column="1" Grid.ColumnSpan="19" Grid.Row="1" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding SelezionaPaese}" />
+                </StackLayout.GestureRecognizers>
+                <StackLayout Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Image Source="{Binding image}" Aspect="AspectFill" />
+                    <Label x:Name="selectCountry2" Grid.ColumnSpan="20" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Small" />
+                </StackLayout>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>-->

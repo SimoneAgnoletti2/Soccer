@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Soccer.Views.Anteprima"
+             x:Name="First">
+    <!--Pages can be added as references or inline-->
+
+    <ContentPage.Content  Title="4"  BackgroundColor="Black" FlowDirection="MatchParent">
+
+        <Grid x:Name="Grid" BackgroundColor="White" IsClippedToBounds="True" Margin=" 0, 0,0, 0"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" >
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="10*" ></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="40*"></ColumnDefinition>
+                <ColumnDefinition Width="20*"></ColumnDefinition>
+                <ColumnDefinition Width="10*" ></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="10*"/>
+            </Grid.RowDefinitions>
+
+            <Image IsVisible="{Binding Conn}" x:Name="primo" Grid.Row="0" Grid.Column="2"  Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+
+            <ActivityIndicator IsVisible="{Binding Conn}" x:Name="act" Color="#ff4a00" Grid.Column="0" Grid.ColumnSpan="7" Grid.Row="1" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="5" Grid.Row="2"  BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label x:Name="lblUser" Padding="0, 0, 0, 0" Text="Username" TextColor="#8c8c8c" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="3" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout  BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Entry Focused="OnFocusedUser" Unfocused="OnFocusedUserOut" x:Name="nick"  TextColor="Black"  HorizontalTextAlignment="Start" Placeholder="Username" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="White" PlaceholderColor="Black" ></Entry>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="4" Grid.Row="4" Margin="0, 0, 0, 5" BackgroundColor="white" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="lblPass" Padding="0, 0, 0, 0" Text="Password" TextColor="#8c8c8c" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout  BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Entry Focused="OnFocusedPass" Unfocused="OnFocusedPassOut" x:Name="pass" IsPassword="True"  TextColor="Black"  HorizontalTextAlignment="Start" Placeholder="Password" HorizontalOptions="FillAndExpand" VerticalOptions="Center" BackgroundColor="White" PlaceholderColor="Black" ></Entry>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.Row="6" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                <CheckBox x:Name="check"  BackgroundColor="White" Color="#ff4a00"  />
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="3" Grid.Row="6" Margin="30, 0, 0, 0" BackgroundColor="white" HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand">
+                <Label x:Name="rimani" Padding="0, 0, 0, 0"  TextColor="#8c8c8c"  HorizontalOptions="StartAndExpand" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+
+            <Button IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="3"   Grid.Row="7" Padding="0, 0, 0, 0" CornerRadius="10"  BackgroundColor="#ff4a00" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" />
+            <Button IsVisible="{Binding Conn}" x:Name="login"  Clicked="ButtonClickedLogin" Grid.Column="1" Grid.ColumnSpan="3"   Grid.Row="7" Padding="0, 0, 0, 0" CornerRadius="10" BackgroundColor="#ff4a00" TextColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" />
+
+            <Button IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="3"  Grid.Row="8" Padding="0, 0, 0, 0" CornerRadius="20" Text="Registrati" BorderColor="OrangeRed" BorderWidth="2" BackgroundColor="White" TextColor="#ff4a00" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" />
+            <Button IsVisible="{Binding Conn}" x:Name="signup" Clicked="ButtonClickedSignin" Grid.Column="1" Grid.ColumnSpan="3"  Grid.Row="8" Padding="0, 0, 0, 0" CornerRadius="20" Text="Registrati" BorderColor="OrangeRed" BorderWidth="2" BackgroundColor="White" TextColor="#ff4a00" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" FontSize="Small" />
+
+
+            <Image Grid.Row="0" Grid.RowSpan="8" Grid.Column="1" Grid.ColumnSpan="3" x:Name="connectionerror" IsVisible="{Binding NotConn}" HorizontalOptions="End" VerticalOptions="Start"  />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

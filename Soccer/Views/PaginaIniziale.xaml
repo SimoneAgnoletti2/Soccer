@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Soccer.Views.PaginaIniziale" Title="{Binding Title}"
+             BackgroundColor="#ff4a00">
+
+    <ContentPage.Content>
+        <Grid x:Name="scroll" BackgroundColor="white" IsClippedToBounds="True" Margin=" 0, 0, 0, 0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="6*" />
+                <RowDefinition Height="8*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="25*" />
+                <RowDefinition Height="5*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="20" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Text="{Binding Name}" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+            </StackLayout>
+
+
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="20" BackgroundColor="#ff4a00" />
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" BackgroundColor="#ff4a00" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image  x:Name="indietro" WidthRequest="50" Aspect="AspectFit" IsVisible="{Binding Indietro}" IsEnabled="{Binding Indietro}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MeseIndietro}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="4" Grid.Row="1" Grid.ColumnSpan="12" Margin="0, 1, 0, 1" BackgroundColor="#ff4a00" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Text="{Binding Mese}" TextColor="White" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="17" Grid.ColumnSpan="4" Grid.Row="1" BackgroundColor="#ff4a00" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image x:Name="avanti"  WidthRequest="50" Aspect="AspectFit" IsVisible="{Binding Avanti}" IsEnabled="{Binding Avanti}" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding MeseAvanti}" />
+                    </Image.GestureRecognizers>
+                </Image>
+            </StackLayout>
+
+
+
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="9" Grid.Row="2" Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Padding="0, 25, 0, 0" Text="Schedine giocate" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="3" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label  Text="{Binding Sgiocate}" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="9" Grid.Row="4" Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Padding="0, 25, 0, 0" Text="Schedine giocate" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="1" Grid.ColumnSpan="8" Grid.Row="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label  Text="{Binding Sgiocate}" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="12" Grid.ColumnSpan="9" Grid.Row="2" Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Padding="0, 25, 0, 0" Text="Schedine vinte" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="12" Grid.ColumnSpan="8" Grid.Row="3" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label  Text="{Binding Svinte}" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="12" Grid.ColumnSpan="9" Grid.Row="4" Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Padding="0, 25, 0, 0" Text="Saldo" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="Start" VerticalOptions="Start" FontSize="Small" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding Conn}" Grid.Column="12" Grid.ColumnSpan="8" Grid.Row="5" BackgroundColor="Black" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <StackLayout Margin="0, 0, 0, 5" BackgroundColor="White" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                    <Label  Text="{Binding Saldo}" TextColor="Black" TextTransform="Uppercase" HorizontalOptions="EndAndExpand" VerticalOptions="EndAndExpand" FontSize="Large" />
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout IsVisible="{Binding Conn}" Grid.Row="7" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="21" BackgroundColor="#B3B3B3" Margin="0, 0, 0, 0">
+            </StackLayout>
+
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5, 0" BackgroundColor="White"   >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="neww" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NuovaSchedina}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold" Text="NUOVA SCHEDINA" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding NuovaSchedina}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="7" Grid.Column="7" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5, 0" BackgroundColor="White" >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="reload" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SchedineInCorso}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label  FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold" Text="SCHEDINE IN CORSO" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding SchedineInCorso}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="7" Grid.Column="14" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5, 0" BackgroundColor="White" >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="storico" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding StoricoSchedine}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label  FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold" Text="STORICO SCHEDINE" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding StoricoSchedine}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5,5" BackgroundColor="White" >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="lader" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClassificheCampionati}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label  FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold" Text="CLASSIFICHE CAMPIONATI" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClassificheCampionati}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="8" Grid.Column="7" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5,5" BackgroundColor="White" >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="ladder" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClassificheGiocatori}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label  FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold"  Text="CLASSIFICHE GIOCATORI" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ClassificheGiocatori}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+            <Frame Padding="0,0,0,0" IsVisible="{Binding Conn}" HasShadow="True" BorderColor="Black" Grid.Row="8" Grid.Column="14" Grid.ColumnSpan="7" CornerRadius="10" Margin="5, 5, 5,5" BackgroundColor="White" >
+                <StackLayout Padding="0, 10">
+                    <Image Aspect="AspectFit" x:Name="tools" HorizontalOptions="Center" VerticalOptions="Start">
+                        <Image.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Impostazioni}" />
+                        </Image.GestureRecognizers>
+                    </Image>
+                    <Label  FontSize="14" LineBreakMode="WordWrap" FontAttributes="Bold"  Text="IMPOSTAZIONI" TextColor="Black" HorizontalTextAlignment="Center" VerticalOptions="End">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding Impostazioni}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+            </Frame>
+
+            <Image Grid.Row="0" Grid.RowSpan="9" Grid.Column="1" Grid.ColumnSpan="19" x:Name="connectionerror" IsVisible="{Binding NotConn}" HorizontalOptions="End" VerticalOptions="Start"  />
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

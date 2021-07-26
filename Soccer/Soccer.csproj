@@ -1,0 +1,122 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Immagini\01.png" />
+    <None Remove="Immagini\b1.png" />
+    <None Remove="Immagini\b2.png" />
+    <None Remove="Immagini\connectionerror.png" />
+    <None Remove="Immagini\ladder.png" />
+    <None Remove="Immagini\lader.png" />
+    <None Remove="Immagini\live.png" />
+    <None Remove="Immagini\logout.png" />
+    <None Remove="Immagini\menu.png" />
+    <None Remove="Immagini\newtickets.png" />
+    <None Remove="Immagini\reload.png" />
+    <None Remove="Immagini\storico.png" />
+    <None Remove="Immagini\tools.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Immagini\01.png" />
+    <EmbeddedResource Include="Immagini\b1.png" />
+    <EmbeddedResource Include="Immagini\b2.png" />
+    <EmbeddedResource Include="Immagini\connectionerror.png" />
+    <EmbeddedResource Include="Immagini\ladder.png" />
+    <EmbeddedResource Include="Immagini\lader.png" />
+    <EmbeddedResource Include="Immagini\live.png" />
+    <EmbeddedResource Include="Immagini\logout.png" />
+    <EmbeddedResource Include="Immagini\menu.png" />
+    <EmbeddedResource Include="Immagini\newtickets.png" />
+    <EmbeddedResource Include="Immagini\reload.png" />
+    <EmbeddedResource Include="Immagini\storico.png" />
+    <EmbeddedResource Include="Immagini\tools.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.1.0.514" />
+    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="2.0.0.12" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.7.335" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
+    <PackageReference Include="Xam.Plugin.Connectivity" Version="3.2.0" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2012" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.Data.SqlClient">
+      <HintPath>..\..\..\..\..\..\..\..\Program Files (x86)\Microsoft SDKs\UWPNuGetPackages\microsoft.netcore.universalwindowsplatform\6.2.12\ref\uap10.0.15138\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources\LangAppResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LangAppResources.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Risorse\eng.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>eng.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Risorse\Ita.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Ita.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\LangAppResources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>LangAppResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Risorse\eng.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>eng.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Risorse\Ita.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Ita.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Anteprima.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClassificheCampionati.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ClassificheGiocatori.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Impostazioni.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Logout.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\NuovaSchedina.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SchedineInCorso.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\StoricoSchedine.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Renderer\" />
+  </ItemGroup>
+</Project>
