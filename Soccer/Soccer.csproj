@@ -11,6 +11,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Renderer\**" />
+    <EmbeddedResource Remove="Renderer\**" />
+    <None Remove="Renderer\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Immagini\01.png" />
     <None Remove="Immagini\b1.png" />
     <None Remove="Immagini\b2.png" />
@@ -114,9 +120,5 @@
     <EmbeddedResource Update="Views\StoricoSchedine.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Renderer\" />
   </ItemGroup>
 </Project>
